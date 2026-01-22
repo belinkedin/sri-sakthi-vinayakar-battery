@@ -1,6 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 import { MapPin, Zap, Phone } from 'lucide-react';
 
 // Import Swiper styles
@@ -119,13 +120,25 @@ const HeroCarousel = () => {
                                                 {slide.heading}
                                             </h2>
 
-                                            <a
-                                                href={slide.cta.link}
-                                                className="btn btn-primary hero-btn-pro"
-                                            >
-                                                {slide.cta.icon && <span style={{ marginRight: '8px' }}>{slide.cta.icon}</span>}
-                                                {slide.cta.text}
-                                            </a>
+                                            {slide.cta.link.startsWith('http') ? (
+                                                <a
+                                                    href={slide.cta.link}
+                                                    className="btn btn-primary hero-btn-pro"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    {slide.cta.icon && <span style={{ marginRight: '8px' }}>{slide.cta.icon}</span>}
+                                                    {slide.cta.text}
+                                                </a>
+                                            ) : (
+                                                <Link
+                                                    to={slide.cta.link}
+                                                    className="btn btn-primary hero-btn-pro"
+                                                >
+                                                    {slide.cta.icon && <span style={{ marginRight: '8px' }}>{slide.cta.icon}</span>}
+                                                    {slide.cta.text}
+                                                </Link>
+                                            )}
                                         </div>
                                     </div>
                                 </>
