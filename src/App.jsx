@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -13,7 +13,6 @@ function App() {
       <ScrollToTop />
       <Layout>
         <Routes>
-
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/gallery" element={<Gallery />} />
