@@ -11,11 +11,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // Import New Professional Images
-import slide1 from '../assets/hero-carousel/slide1-car-snow.jpg';
-import slide2 from '../assets/hero-carousel/slide2-auto-rural.jpg';
+import slide1 from '../assets/hero-carousel/slide1-car-snow.png';
+import slide2 from '../assets/hero-carousel/slide2-auto-rural.png';
 import slide3 from '../assets/hero-carousel/slide3-tractor-storm.png';
-import slide4 from '../assets/hero-carousel/slide4-bike-ad-new.jpg';
-import slide5 from '../assets/hero-carousel/slide5-brand-ad-new-clean.jpg';
+import slide4 from '../assets/hero-carousel/slide4-bike-ad-new.png';
+import slide5 from '../assets/hero-carousel/slide5-brand-ad-new-clean.png';
 
 const HeroCarousel = () => {
     const slides = [
